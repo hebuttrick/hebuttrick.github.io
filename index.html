@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Harrison's Resume</title>
     <link rel="stylesheet" type="text/css "href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   </head>
   <body>
     <nav>
@@ -13,9 +14,11 @@
         <li><a href="projects.html">Projects</a></li>
       </ul>
     </nav>
-    <h1>Harrison Buttrick</h1>
+    <h1 id="name">Harrison Buttrick</h1>
     <hr>
-    <img src="Professional_Photo.jpg" alt="Picture of Harrison Buttrick" title="Harrison Buttrick" id=harrison>
+    <img src="Professional_Photo.jpg" alt="Picture of Harrison Buttrick" title="Harrison Buttrick" id="harrison">
+    <button id="remove">REMOVE THE PICTURE</button>
+    <button id="add">ADD THE PICTURE</button>
   <h3>Biography</h3>
   <p>
   Mr. Buttrick works in product management at a legal publishing company. His interets include reading, running, and relaxing.
@@ -29,6 +32,25 @@
     <a href="http://linkedin.com\in\hebuttrick" target="_blank">LinkedIn</a>
     <a href="https://twitter.com/hebuttrick" target="_blank">Twitter</a>
     <iframe width="640" height="360" src="https://www.youtube.com/embed/voLdRQ-19dc" frameborder="0" allowfullscreen></iframe>
-    <button <a href="mailto:hebuttrick@gmail.com">Contact Me</a></button>
+    <button><a href="mailto:hebuttrick@gmail.com">Contact Me</a></button>
+    <form id="mailing_list">
+      <label>First Name</label><br>
+      <input name="first_name" type="text"</input><br>
+      <label>Email Address</label>
+      <br>
+      <input name="email_address" type="text"<br>
+      <input type="checkbox" name="mail" value="yes">Would you like to join the mailing list?</input>
+      <br>
+      <label>How do we know each other?</label>
+      <br>
+      <select name="known">
+        <option value="friend">We're friends</option>
+        <option value="recruiter">I'm a recruiter</option>
+        <option value="unknown">I don't know you yet</option>
+      </select><br><br>
+    </form>
+    <div id="confirmation_msg"></div>
+    <button onclick="infoSubmit()">Submit</button>
   </body>
+  <script src="app.js"></script>
 </html>
